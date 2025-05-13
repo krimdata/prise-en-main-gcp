@@ -17,8 +17,8 @@ steps:
     - 'europe-west1'
     - '--platform'
     - 'managed'
-    - '--service-account'
-    - 'ci-cd-sa@prise-en-main-gcp-458908.iam.gserviceaccount.com' #
+  #  - '--service-account'
+  #  - 'ci-cd-sa@prise-en-main-gcp-458908.iam.gserviceaccount.com' #
     - '--allow-unauthenticated'
 images:
 - 'europe-west1-docker.pkg.dev/$PROJECT_ID/repo-ci/my-app:$COMMIT_SHA' #
