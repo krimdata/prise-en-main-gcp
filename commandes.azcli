@@ -1,0 +1,15 @@
+# Activation des APIs
+gcloud services enable cloudbuild.googleapis.com run.googleapis.com artifactregistry.googleapis.com
+#Provisionnement du repo Docker en IaC
+
+
+gcloud alpha builds triggers create github --name="my-app-trigger" --repo-owner="krimdata" --repo-name="prise-en-main-gcp" --branch-pattern="^main$" --build-config="cloudbuild.yml" --region="europe-west1"
+
+
+
+gcloud builds submit --config=cloudbuild.yml --substitutions=SHORT_SHA=$(git rev-parse --short HEAD)
+
+Client ID
+Ov23liQRlxSOHaXKM0ZH
+
+12ba4a65d42fdb9c836269ca57c55e8effcaed53
